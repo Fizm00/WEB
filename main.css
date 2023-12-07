@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+body {
+    background: url('panoramic-view-sunset-night.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #424874;
+    padding: 7px;
+  }
+
+.Title {
+    text-align: center;
+    font-size: 40px;
+    margin-right: -700px;
+}
+
+.sidebar-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    padding: 7px;
+    color: white;
+}
+
+.sidebar-toggle:hover {
+    background-color: rgb(5, 6, 45);
+}
+
+/* Adjust the position of the sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initial position off-screen */
+    width: 250px;
+    height: 100%;
+    background: rgb(5, 6, 45);
+    padding-top: 60px; /* Adjust according to your header height */
+    transition: 0.3s;
+    overflow-x: hidden;
+    color: white;
+    z-index: 999; /* Ensure it's on top of other elements */
+}
+
+.sidebar .sidebar-link.dashboard {
+    font-size: 22px;
+    font-weight: bold;
+    color: #A6B1E1;
+    border-bottom: 2px solid #A6B1E1;
+    margin-bottom: 10px;
+}
+
+/* Style for the sub-links */
+.sidebar .sub-links {
+    padding-left: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #A6B1E1;
+    color: black;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.datatablecontainer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+div.dataTables_wrapper div.dataTables_info,
+div.dataTables_wrapper div.dataTables_paginate {
+    margin-top: 0.5em;
+    font-size: 0.8em;
+}
+
+div.dataTables_wrapper div.dataTables_length,
+div.dataTables_wrapper div.dataTables_filter {
+    margin-bottom: 0.5em;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin: 0.5em 0;
+}
